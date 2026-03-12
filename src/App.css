@@ -1,0 +1,192 @@
+/* ล้างค่าเริ่มต้นของเบราว์เซอร์นิดหน่อยให้ขอบเนียนๆ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e9ecef;
+}
+
+/* 1. พื้นหลังสุดของหน้าจอ */
+.app-wrapper {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+/* 2. Container หลักที่เอามาครอบ */
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.header-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* 3. กล่อง Card ย่อยๆ ด้านใน */
+.input-card {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.input-label {
+  font-weight: bold;
+  color: #444;
+}
+
+.form-input {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 8px;
+  display: block;
+  width: 100%;
+}
+
+.file-status {
+  margin-top: 8px;
+  color: #1890ff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* 4. สไตล์ปุ่มกด และเอฟเฟกต์ Hover */
+.submit-btn {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #40a9ff;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* 5. สไตล์ส่วนแสดงผลลัพธ์ */
+.result-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.alert-box {
+  color: #333;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 6. สไตล์สำหรับการ์ดรายวัน (Daily Cards) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.daily-card {
+  padding: 20px 15px;
+  border-radius: 12px;
+  border: 2px solid;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.daily-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-day {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card-pm {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.card-unit {
+  font-size: 0.9rem;
+  font-weight: normal;
+  opacity: 0.8;
+  margin-left: 2px;
+}
+
+.card-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* 7. สไตล์กราฟแนวโน้ม */
+.chart-container {
+  height: 400px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px dashed #eee;
+}
+
+.chart-title {
+  margin-top: 0;
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
